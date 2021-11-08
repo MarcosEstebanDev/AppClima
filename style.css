@@ -1,0 +1,126 @@
+body {
+    max-width: 1000vh;
+    max-height: 1000vh;
+    min-height: 100vh;
+    min-width: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: content;
+    box-decoration-break: clone;
+    box-sizing: border-box;
+    background-color: white;
+    padding: 0;
+    margin: 0;
+}
+
+.container-md {
+    width: 20em;
+    height: 30em;
+    display: flex;
+    border: 2px, solid rgb(70, 68, 68);
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 1rem;
+    -webkit-box-shadow: 7px 7px 5px 5px rgba(50, 50, 50, 0.29);
+    -moz-box-shadow: 7px 7px 5px 5px rgba(50, 50, 50, 0.29);
+    box-shadow: 7px 7px 5px 5px rgba(50, 50, 50, 0.29);
+}
+
+.container-md.day {
+    background-image: url(/imagenes/dia.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: rgb(59, 59, 59);
+}
+
+.container-md.night {
+    background-image: url(/imagenes/noche.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: lightcyan;
+}
+
+.block-text {
+    margin: 0, 0, 0, auto;
+    padding: 0, 0, 0, auto;
+    width: 99%;
+    display: flex;
+    flex: 0.5, 0.5, 0.5;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: unset;
+    border-bottom: solid;
+    border-radius: 1px;
+    border-color: rgba(127, 127, 128, 0.29);
+    font-size: 15px;
+}
+
+.block-text .location {
+    flex-direction: flex;
+    flex-basis: 8.5rem;
+    flex-wrap: nowrap;
+}
+
+.block-teext {
+    width: 99%;
+    font-size: 50px;
+    margin: 0, 0, 0, auto;
+    padding: 0, 0, 0, auto;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.block-teext .sky {
+    font-size: 25px;
+}
+
+.block {
+    margin: 0, 0, 0, auto;
+    padding: 0, 0, 0, auto;
+    width: 99%;
+    display: flex;
+    flex-direction: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 3;
+    font-size: 80px;
+    font-style: oblique;
+}
+
+.block p {
+    margin-bottom: 0;
+}
+
+.bas {
+    margin: auto;
+    padding: auto;
+    width: 99%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(139, 139, 139, 0.29);
+}
+
+.parrafo {
+    margin-bottom: 0rem;
+}
+
+.base {
+    width: 99%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#temperatureMax {
+    color: rgb(189, 76, 56);
+}
+
+#temperatureMin {
+    color: rgb(101, 101, 255);
+}
