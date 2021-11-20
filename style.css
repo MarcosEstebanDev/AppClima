@@ -28,7 +28,7 @@ body {
 }
 
 .container-md.day {
-    background-image: url(imagenes/dia.jpg);
+    background-image: url(/imagenes/dia.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -36,7 +36,7 @@ body {
 }
 
 .container-md.night {
-    background-image: url(imagenes/noche.jpg);
+    background-image: url(/imagenes/noche.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
