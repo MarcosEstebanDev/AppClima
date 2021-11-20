@@ -25,7 +25,7 @@ const setWeatherData = data => {
 
     Object.keys(weatherData).forEach(key => {
         document.getElementById(key).textContent = weatherData[key];
-        document.getElementById('icon').src = "http://openweathermap.org/img/wn/" + data.weather[0].icon + "@2x.png ";
+        document.getElementById('icon').src = "https://openweathermap.org/img/wn/" + data.weather[0].icon + "@2x.png ";
         document.getElementById('temperature').textContent = data.main.temp.toFixed();
         document.getElementById('temperatureMax').textContent = data.main.temp_max.toFixed();
         document.getElementById('temperatureMin').textContent = data.main.temp_min.toFixed();
