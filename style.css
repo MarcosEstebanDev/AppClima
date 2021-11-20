@@ -36,7 +36,7 @@ container-md.day {
 }
 
 .container-md.night {
-    background-image: url(https://github.com/MarcosGodoydevelopped/AppClima/blob/main/imagenes/noche.jpg);
+    background-image: url(https://raw.githubusercontent.com/MarcosGodoydevelopped/AppClima/main/imagenes/noche.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
