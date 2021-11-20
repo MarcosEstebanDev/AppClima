@@ -27,7 +27,7 @@ body {
     box-shadow: 7px 7px 5px 5px rgba(50, 50, 50, 0.29);
 }
 
-.container-md.day {
+.day {
     background-image: url(https://fondosmil.com/fondo/9.jpg);
     background-size: cover;
     background-repeat: no-repeat;
