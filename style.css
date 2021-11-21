@@ -27,7 +27,7 @@ body {
     box-shadow: 7px 7px 5px 5px rgba(50, 50, 50, 0.29);
 }
 
-container-md.day {
+.container-md.day {
     background-image: url(https://raw.githubusercontent.com/MarcosGodoydevelopped/AppClima/main/imagenes/dia.jpg);
     background-size: cover;
     background-repeat: no-repeat;
