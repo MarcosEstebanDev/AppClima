@@ -3,10 +3,13 @@ const API_KEY = '8b90ffb17808b240ec32c84ddb9fee40';
 const fetchData = position => {
     const { latitude, longitude } = position.coords;
 
+    //Obtenemos la Data por la localizacion geografica, llamando a los atributos del objeto JSON 
+    
     fetch(`https://api.openweathermap.org/data/2.5/weather?units=metric&lat=${latitude}&lon=${longitude}&appid=${API_KEY}`)
         .then(response => response.json())
         .then(data => setWeatherData(data));
 }
+//Informacion que nos interesa para mostrar en el DOM
 const setWeatherData = data => {
     console.log(data);
     const weatherData = {
@@ -32,6 +35,7 @@ const setWeatherData = data => {
 
 
     });
+    
     const dayHour = new Date(data.dt * 1000).getHours();
 
     if (dayHour > 6 && dayHour < 18) {
@@ -42,16 +46,16 @@ const setWeatherData = data => {
         container.classList.remove("day");
         container.classList.add("night")
     }
-    console.log(dayHour);
 
 }
 
 
-//para obtener la informacion del dia y devolver fomateada la respuesta de date, seteando el dia el mes y el año.
+//Obtener la informacion del dia y devolver fomateada la respuesta de date, seteando el dia el mes y el año.
 const getDate = () => {
     let date = new Date();
     return `${date.getDate()}-${ ('0' + (date.getMonth() + 1)).slice(-2)}-${date.getFullYear()}`;
 }
+//Obtener la ubicacion del usuario, geolocazion, posicion.
 const onLoad = () => {
     navigator.geolocation.getCurrentPosition(fetchData);
 }
