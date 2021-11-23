@@ -9,7 +9,7 @@ const fetchData = position => {
         .then(response => response.json())
         .then(data => setWeatherData(data));
 }
-//Informacion que nos interesa para mostrar en el DOM
+//Informacion que nos interesa mostrar en el DOM
 const setWeatherData = data => {
     console.log(data);
     const weatherData = {
@@ -25,7 +25,8 @@ const setWeatherData = data => {
         date: getDate(),
 
     }
-
+    //Recorrer todo el objeto y devolver las keys. Setear la info en el DOM
+    
     Object.keys(weatherData).forEach(key => {
         document.getElementById(key).textContent = weatherData[key];
         document.getElementById('icon').src = "https://openweathermap.org/img/wn/" + data.weather[0].icon + "@2x.png ";
@@ -35,7 +36,7 @@ const setWeatherData = data => {
 
 
     });
-    
+    //Crea una class segun el horario 
     const dayHour = new Date(data.dt * 1000).getHours();
 
     if (dayHour > 6 && dayHour < 18) {
@@ -55,6 +56,7 @@ const getDate = () => {
     let date = new Date();
     return `${date.getDate()}-${ ('0' + (date.getMonth() + 1)).slice(-2)}-${date.getFullYear()}`;
 }
+
 //Obtener la ubicacion del usuario, geolocazion, posicion.
 const onLoad = () => {
     navigator.geolocation.getCurrentPosition(fetchData);
