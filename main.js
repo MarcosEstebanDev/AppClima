@@ -3,7 +3,7 @@ const API_KEY = '8b90ffb17808b240ec32c84ddb9fee40';
 const fetchData = position => {
     const { latitude, longitude } = position.coords;
 
-    //Obtenemos la Data por la localizacion geografica, llamando a los atributos del objeto JSON 
+    //Obtenemos la Data por la localizacion geografica
     
     fetch(`https://api.openweathermap.org/data/2.5/weather?units=metric&lat=${latitude}&lon=${longitude}&appid=${API_KEY}`)
         .then(response => response.json())
@@ -51,7 +51,7 @@ const setWeatherData = data => {
 }
 
 
-//Obtener la informacion del dia y devolver fomateada la respuesta de date, seteando el dia el mes y el año.
+//Obtener la informacion del el dia el mes y el año.
 const getDate = () => {
     let date = new Date();
     return `${date.getDate()}-${ ('0' + (date.getMonth() + 1)).slice(-2)}-${date.getFullYear()}`;
